@@ -7,18 +7,33 @@ svg {
   height: 100%;
   width: 100%;
 }
-textpath  .Text1 {fill="gold"}
- body .lamp{
-	height:590;
-	width:100;
-	bottom:auto;
-	position:Fixed; 
- 	 bottom: -70%;
-  	left: 35%
+body{
+	
+	overflow:hidden;
+height: 100%;
+  width: 100%;
+}
+body .textcurve {fill="gold" ;	 startoffset:20}
+
+}
+lamp{
+    width: 175px;
+    height: 175px;
+    line-height: 175px;
+
+
+
 	
 }
 lamp .a{
-	top:0;
-	left:45;
+   width: 100%;
+
+ 	left:50;
+	right:50;
+
+    bottom: 0px;
+	
 }
-lamp .img{transform: translate(-50%, -50%);}
+lamp .img{ margin:auto; /* Required */
+ /* Required */
+}
