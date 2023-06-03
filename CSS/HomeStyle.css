@@ -17,20 +17,24 @@ overflow:hidden;
 height: 100%;
 	
  width: 100%;
+	margin-bottom:5%;
 
 }
 body .textcurve {fill="gold" ;	 startoffset:20}
 
 }
 lamp{
-    width: 175px;
-    height: 175px;
+   height: 100%;
+
+	
+  width: 100%;
     line-height: 175px;
 
 
 
 	
 }
+body .textcurve {fill="gold" ;	 startoffset:20}
 lamp .a{
    width: 100%;
 
@@ -45,27 +49,32 @@ lamp .img{ margin:auto; /* Required */
 }
 image{text-align:center;}
 @media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) { 
-body .textcurve {fill="gold" ;	 startoffset:20}
+	body .Text1{margin-bottom: 30%:}
 svg {
-  height:90%;
+  height:100%;
 
 	
   width:100%;
+margin-bottom: -11%;
 
 }
-	body .textcurve {fill="gold" ;	 startoffset:10}
-lamp .a{
-   width: 100%;
+	body .textcurve {fill="gold" ; startoffset:10; }
+
+	lamp{
+   height: 100%;
+
+	
+  width: 100%;
+    line-height: 175px;
 
 
 
-    bottom: 0px;
 	
 }
 body{
 overflow:hidden;
 height: 90%;
-	
+
  width: 100%;
 
 }
