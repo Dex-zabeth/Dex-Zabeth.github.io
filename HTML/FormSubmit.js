@@ -40,8 +40,7 @@ function checkValidations() {
         } else {
             valid = true;
         }
-    }
-    if (valid == true) { window.location.href = 'mailto:Joshua.Michalik@triosstudent.com?subject=The subject - ' + name + ' (' + email + ')' + '&body=' + message; }
+        window.location.href = 'mailto:Joshua.Michalik@triosstudent.com?subject= companyName' + name + ' (' + email + ')' + '&body=' + message; }
 }
 
 function reset() {
