@@ -45,7 +45,7 @@ function checkValidations() {
 }
 
 function sendEmail(name, email, companyName, message) {
-    window.location.href = 'mailto:Joshua.Michalik@triosstudent.com?subject=' + companyName + ' ' + name + ' (' + email + ')' + '&body=' + message;
+    window.location.href = 'mailto:Joshua.Michalik@triosstudent.com&subject=(companyName+name+email)&body=message';
 }
 
 function reset() {
