@@ -1,4 +1,10 @@
+javascript
+const recipient = 'Joshua.Michalik@triosstudent.com';
 
+
+ 
+
+window.location.href = mailtoLink;
 const nameEl = document.querySelector("#name");
 const emailEl = document.querySelector("#email");
 const companyNameEl = document.querySelector("#company-name");
@@ -45,8 +51,7 @@ function checkValidations() {
 }
 
 function sendEmail(name, email, companyName, message) {
-    window.location.href = 'mailto:Joshua.Michalik@triosstudent.com&subject=companyName&body=message';
-}
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
 function reset() {
     nameEl.value = "";
