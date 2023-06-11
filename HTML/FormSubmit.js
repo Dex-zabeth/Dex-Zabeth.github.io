@@ -21,29 +21,27 @@ function checkValidations() {
             document.querySelector(".name-error").classList.add("error");
             document.querySelector(".name-error").innerText =
                 "Please enter only characters!";
-            valid = false;
+        
         } else {
-            valid = true;
+        
         }
     }
     if (email === "") {
         document.querySelector(".email-error").classList.add("error");
         document.querySelector(".email-error").innerText =
             "Please fill out this field!";
-        valid = false;
+        
     } else {
         if (!/^\S+@\S+\.\S+$/.test(email)) {
             document.querySelector(".email-error").classList.add("error");
             document.querySelector(".email-error").innerText =
                 "Please enter a valid email address!";
-            valid = false;
+          
         } else {
-            valid = true;
+          
         }
     }
-    if (valid) {
-        sendEmail(name, email, companyName, message);
-    }
+  
 }
 
 function sendEmail(name, email, companyName, message) {
