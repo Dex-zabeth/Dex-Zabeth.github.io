@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
     xhr.onload = () => {
         if (xhr.status === 200) {
             // Redirect the user to a thank-you page
-            window.location.href = 'thank-you.html';
+            window.location.href = 'index.html';
         } else {
             // Display an error message
             alert('There was an error submitting the form. Please try again later.');
