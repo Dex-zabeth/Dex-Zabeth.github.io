@@ -60,7 +60,7 @@ body .Main {
             color: aqua;
             background-color: #262525;
         }
-  label,input {
+  label,input,button {
             top: 100%;
             width: 80%;
             height: 100%;

@@ -23,18 +23,44 @@
 				<h1>Contact</h1>
 				<p>Name: Joshua Michalik</p>
 				<p>Email: <a href="mailto:Joshua.Michalik@triosstudent.com">Joshua.Michalik@triosstudent.com</a></p>
-				<form action="FormSubmit.js" method="post">
-					<label for="name">Your Name:</label>
-					<input type="text" id="name" name="name" required><br>
+				<div class="contain">
 
-					<label for="email">Your Email:</label>
-					<input type="email" id="email" name="email" required><br>
+					<div class="wrapper">
 
-					<label for="message">Message:</label>
-					<textarea id="message" name="message" rows="5" cols="30" required></textarea><br>
+						<div class="form">
+							
+							<h2 class="form-headline">Send us a message</h2>
+							<form id="submit-form" action="">
+								<p>
+									<input id="name" class="form-input" type="text" placeholder="Your Name*">
+									<small class="name-error"></small>
+								</p>
+								<p>
+									<input id="email" class="form-input" type="email" placeholder="Your Email*">
+									<small class="name-error"></small>
+								</p>
+								<p class="full-width">
+									<input id="company-name" class="form-input" type="text" placeholder="Company Name*" >
+									<small></small>
+								</p>
+								<p class="full-width">
+									<textarea minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+									<small></small>
+								</p>
 
-					<input type="submit" value="submit">
-				</form>
+								<p class="full-width">
+									<input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+									<button class="reset-btn" onclick="reset()">Reset</button>
+								</p>
+							</form>
+						</div>
+
+						<div class="contacts contact-wrapper">
+
+							
+						</div>
+					</div>
+				</div>
 	</body>
 </html>
 

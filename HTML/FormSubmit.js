@@ -1,34 +1,53 @@
-const form = document.querySelector('form');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
-const submitButton = document.querySelector('input[type="submit"]');
+const nameEl = document.querySelector("#name");
+const emailEl = document.querySelector("#email");
+const companyNameEl = document.querySelector("#company-name");
+const messageEl = document.querySelector("#message");
+const valid = false;
+const form = document.querySelector("#submit-form");
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Disable the submit button to prevent multiple submissions
-    submitButton.disabled = true;
-
-    // Get the form data
-    const name = nameInput.value;
-    const email = emailInput.value;
-    const message = messageInput.value;
-
-    // TODO: Add validation and error handling here
-
-    // Send the data using AJAX
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'submit-form.php');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = () => {
-        if (xhr.status === 200) {
-            // Redirect the user to a thank-you page
-            window.location.href = 'thank-you.html';
+function checkValidations() {
+    let letters = /^[a-zA-Z\s]*$/;
+    const name = nameEl.value.trim();
+    const email = emailEl.value.trim();
+    const companyName = companyNameEl.value.trim();
+    const message = messageEl.value.trim();
+    if (name === "") {
+        document.querySelector(".name-error").classList.add("error");
+        document.querySelector(".name-error").innerText =
+            "Please fill out this field!";
+    } else {
+        if (!letters.test(name)) {
+            document.querySelector(".name-error").classList.add("error");
+            document.querySelector(".name-error").innerText =
+                "Please enter only characters!";
+            valid = false;
         } else {
-            // Display an error message
-            alert('There was an error submitting the form. Please try again later.');
+            valid = true;
+
         }
-    };
-    xhr.send(`name=${name}&email=${email}&message=${message}`);
-});
+    }
+    if (email === "") {
+        document.querySelector(".name-error").classList.add("error");
+        document.querySelector(".name-error").innerText =
+            "Please fill out this field!";
+        valid = false;
+    } else {
+        if (!letters.test(name)) {
+            document.querySelector(".name-error").classList.add("error");
+            document.querySelector(".name-error").innerText =
+                "Please enter only characters!";
+            valid = false;
+        } else {
+            valid = true;
+        }
+    }
+    if (valid == true) { window.location.href = 'mailto:Joshua.Michalik@triosstudent.com?subject=The subject - ' + name + ' (' + email + ')' + '&body=' + message; }
+}
+
+function reset() {
+    nameEl = "";
+    emailEl = "";
+    companyNameEl = "";
+    messageEl = "";
+    document.querySelector(".name-error").innerText = "";
+}
