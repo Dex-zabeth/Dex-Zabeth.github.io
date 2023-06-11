@@ -60,6 +60,13 @@ body .Main {
             color: aqua;
             background-color: #262525;
         }
+  label,input {
+            top: 100%;
+            width: 80%;
+            height: 100%;
+            color: aqua;
+            background-color: #262525;
+        }
     body .Main h2 {
         top: 100%;
         width: 80%;
@@ -101,6 +108,12 @@ body  {
     }
 
     body  p {
+        width: 75%;
+        height: 50%;
+        color: #00d6d6;
+        background-color: #262525;
+    }  
+	body  textarea {
         width: 75%;
         height: 50%;
         color: #00d6d6;
