@@ -1,8 +1,9 @@
+
 const nameEl = document.querySelector("#name");
 const emailEl = document.querySelector("#email");
 const companyNameEl = document.querySelector("#company-name");
 const messageEl = document.querySelector("#message");
-const valid = false;
+let valid = false;
 const form = document.querySelector("#submit-form");
 
 function checkValidations() {
@@ -23,30 +24,37 @@ function checkValidations() {
             valid = false;
         } else {
             valid = true;
-
         }
     }
     if (email === "") {
-        document.querySelector(".name-error").classList.add("error");
-        document.querySelector(".name-error").innerText =
+        document.querySelector(".email-error").classList.add("error");
+        document.querySelector(".email-error").innerText =
             "Please fill out this field!";
         valid = false;
     } else {
-        if (!letters.test(name)) {
-            document.querySelector(".name-error").classList.add("error");
-            document.querySelector(".name-error").innerText =
-                "Please enter only characters!";
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            document.querySelector(".email-error").classList.add("error");
+            document.querySelector(".email-error").innerText =
+                "Please enter a valid email address!";
             valid = false;
         } else {
             valid = true;
         }
-        window.location.href = 'mailto:Joshua.Michalik@triosstudent.com?subject= companyName' + name + ' (' + email + ')' + '&body=' + message; }
+    }
+    if (valid) {
+        sendEmail(name, email, companyName, message);
+    }
+}
+
+function sendEmail(name, email, companyName, message) {
+    window.location.href = 'mailto:Joshua.Michalik@triosstudent.com?subject=' + companyName + ' ' + name + ' (' + email + ')' + '&body=' + message;
 }
 
 function reset() {
-    nameEl = "";
-    emailEl = "";
-    companyNameEl = "";
-    messageEl = "";
+    nameEl.value = "";
+    emailEl.value = "";
+    companyNameEl.value = "";
+    messageEl.value = "";
     document.querySelector(".name-error").innerText = "";
+    document.querySelector(".email-error").innerText = "";
 }
