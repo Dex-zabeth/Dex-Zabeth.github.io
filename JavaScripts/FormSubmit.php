@@ -15,7 +15,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $headers = "From: $email\r\nReply-To: $email\r\n";
     mail($to, $subject, $body, $headers);
 
-    // Redirect the user to a thank-you page
-    header('Location: ../Index.html');
     exit;
 }
