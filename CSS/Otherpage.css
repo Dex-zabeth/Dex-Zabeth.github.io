@@ -89,7 +89,15 @@ body .Main {
         color: #00d6d6;
         background-color: #262525;
     }
-
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) { 
+logo {
+    position: absolute;
+    
+    top: 10%;
+    right:0;
+    width: 55%; /* 15% of the viewport width */
+    height: 55%; /* 15% of the viewport height */
+object-fit: contain;}}
 body  {
     overflow: scroll;
     position: static;
