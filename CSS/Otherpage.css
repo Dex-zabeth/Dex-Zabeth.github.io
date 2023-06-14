@@ -99,7 +99,7 @@ logo {
     height: 55%; /* 15% of the viewport height */
 object-fit: contain;}
 body  {
-    overflow: scroll;
+    overflow:auto;
     position: static;
     top: 10%;
     width: 50%;
