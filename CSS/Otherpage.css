@@ -44,7 +44,7 @@ body BottomBar {
 
 }
 body .Main {
-    
+    overflow: visible;
     position: static;
     top: 10%;
     width: 100%;
