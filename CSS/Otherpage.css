@@ -4,7 +4,6 @@
     box-sizing: border-box;
     background-color: #262525;
 }
-
 .topnav {
     top: 0%;
     left: 0%;
@@ -13,7 +12,10 @@
     overflow: hidden;
 }
 
+
+    /* Style the links inside the navigation bar */
     .topnav a {
+        
         float: left;
         color: #f2f2f2;
         text-align: center;
@@ -22,23 +24,25 @@
         font-size: 17px;
     }
 
+        /* Change the color of links on hover */
         .topnav a:hover {
             background-color: #ddd;
             color: black;
         }
 
+        /* Add a color to the active/current link */
         .topnav a.active {
             background-color: #04AA6D;
             color: white;
         }
 
-body .BottomBar {
+body BottomBar {
     background-color: #262525;
     bottom: 95%;
     position: static;
-    width: 100%;
-}
+    width:100%;
 
+}
 body .Main {
     overflow: scroll;
     position: static;
@@ -49,50 +53,103 @@ body .Main {
     padding: 5%;
 }
 
-    body .Main h1,
-    body .Main h2,
-    body .Main p,
-    body .Main textarea,
-    label,
-    input,
-    button,
-    form {
-        width: 90%;
+ body .Main h1 {
+            top: 100%;
+            width: 80%;
+            height: 100%;
+            color: aqua;
+            background-color: #262525;
+        }
+.logo {
+    position: absolute;
+    
+    top: 40%;
+    right:0;
+    width: 55%; /* 15% of the viewport width */
+    height: 55%; /* 15% of the viewport height */
+    object-fit: contain;
+}
+  label,input,button,form {
+            top: 100%;
+            width: 90%;
+            height: 100%;
+            color: aqua;
+            background-color: #262525;
+        }
+    body .Main h2 {
+        top: 100%;
+        width: 80%;
+        height: 100%;
+        color: aqua;
+        background-color: #262525;
+    }
+    body .Main p {
+        width: 75%;
+        height: 50%;
+        color: #00d6d6;
+        background-color: #262525;
+    }
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) { 
+logo {
+    position: absolute;
+    
+    top: 90%;
+    right:0;
+    width: 55%; /* 15% of the viewport width */
+    height: 55%; /* 15% of the viewport height */
+object-fit: contain;}
+body  {
+    overflow: scroll;
+    position: static;
+    top: 10%;
+    width: 50%;
+    height: 100%;
+    background-color: #262525;
+    padding: 5%;
+}
+
+    body  h1 {
+        top: 100%;
+        width: 80%;
         height: 100%;
         color: aqua;
         background-color: #262525;
     }
 
-    body .Main h1,
-    body .Main h2 {
+    body  h2 {
+        top: 100%;
+        width: 80%;
+        height: 100%;
         color: aqua;
+        background-color: #262525;
     }
 
-    body .Main p,
-    body .Main textarea {
+    body  p {
+        width: 75%;
+        height: 50%;
         color: #00d6d6;
+        background-color: #262525;
+    }  
+	body  textarea {
+        width: 75%;
+        height: 50%;
+        color: #00d6d6;
+        background-color: #262525;
     }
-
-.logo {
-    position: absolute;
-    top: 40%;
-    right: 0;
-    width: 55%;
-    height: 55%;
-    object-fit: contain;
+ a {
+    color: goldenrod;
+    background-color: #262525;
 }
 
-@media all and (min--moz-device-pixel-ratio: 0) and (min-resolution: 3e1dpcm) {
-    .logo {
-        position: absolute;
-        top: 90%;
-        right: 0;
-        width: 55%;
-        height: 55%;
-        object-fit: contain;
+
+ a:visited {
+        color: darkgoldenrod;
+        background-color: #262525;
     }
 
-    body .Main {
-        width: 50%;
-    }
-}
+
+ 
+ 
+
+
+    /*   Logos For Social svg done by Jeff Moreau*/
