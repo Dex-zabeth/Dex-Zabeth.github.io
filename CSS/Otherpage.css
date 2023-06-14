@@ -44,7 +44,7 @@ body BottomBar {
 
 }
 body .Main {
-    overflow: scroll;
+    
     position: static;
     top: 10%;
     width: 100%;
@@ -99,7 +99,7 @@ logo {
     height: 55%; /* 15% of the viewport height */
 object-fit: contain;}
 body  {
-    overflow:auto;
+
     position: static;
     top: 10%;
     width: 50%;
