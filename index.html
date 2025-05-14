@@ -5,18 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Michalik - Programmer Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="CSS/Otherpage.css">
     <style>
-        /* Add or modify styles as needed */
+        /* Base Styles */
         body {
             font-family: Arial, sans-serif;
-            padding: 0;
             margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            display: flex;
-            flex-direction: column;
             min-height: 100vh;
+            position: relative; /* Needed for absolute positioning */
         }
 
         header {
@@ -29,26 +27,47 @@
         .topnav {
             background-color: #333;
             color: white;
-            padding: 1em;
             text-align: center;
+            padding: 1em;
         }
 
-        .Main {
-          width: min(70%, 800px); /* Takes 90% of screen width up to a max of 800px */
-    margin: 2em auto;
-    padding: clamp(1em, 5vw, 2em)  max-width: 800px;
-            margin: 2em auto;
-            padding: 1em;
+        /* Centered Headings (Absolute Center of Screen) */
+        .screen-center {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
+            width: 100%;
+            z-index: 10;
+            pointer-events: none; /* Allows clicking through to content below */
+        }
+
+        .screen-center h1,
+        .screen-center h2 {
+            margin: 0.5em 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            display: inline-block;
+            padding: 0.5em 1em;
+            border-radius: 8px;
+        }
+
+        /* Main Content (Appears Below) */
+        .Main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1;
+            position: relative;
+            z-index: 1;
+            margin-top: 100vh; /* Push content below viewport */
         }
 
         .logo {
-            max-width: 60%;
-            height: 50%;
+            max-width: 100%;
+            height: auto;
             margin: 1em 0;
         }
 
@@ -62,72 +81,56 @@
             height: 40px;
             margin: 0 5px;
         }
-
-        h1, h2 {
-            text-align: center;
-            width: 100%;
-        }
     </style>
 </head>
 
 <body>
-
     <header>
         <h1>Joshua Michalik - Programmer Portfolio</h1>
     </header>
 
     <div class="topnav">
-        <a class="active" href="index.html">|Home|</a> <a href="HTML/Contact.html">|Contacts|</a> <a
-            href="HTML/ProjectIndex.html">|Finished Projects|</a> <a href="HTML/WIPS.html">|Wips| </a> <a
-            href="HTML/GameJams.html">|Game Jams|</a> <a href="HTML/Snippets.html">|Code Snippets|</a>
+        <a class="active" href="index.html">|Home|</a> 
+        <a href="HTML/Contact.html">|Contacts|</a> 
+        <a href="HTML/ProjectIndex.html">|Finished Projects|</a> 
+        <a href="HTML/WIPS.html">|Wips|</a> 
+        <a href="HTML/GameJams.html">|Game Jams|</a> 
+        <a href="HTML/Snippets.html">|Code Snippets|</a>
     </div>
 
-    <div class="Main">
+    <!-- Centered Headings (Fixed Position) -->
+    <div class="screen-center">
         <h1>Hello, My Name is Joshua Michalik</h1>
-        <img src="EvilGenie.png" alt="Image" class="logo">
-
-        <p>Ready for any challenge! With over Ten years of programming experience in C++, C#, Java, Python, HTML, CSS, and
-            JavaScript.<br /><br />
-            With 10+ years of Unity experience and 1.5+ years of Unreal Engine experience. Let's code the future of Games
-            together!<br /><br />
-            Dreamer by day, gamer by night. Creating video game as if by magic.<br /><br />
-            I'm currently attending Trios College for Video Game Design & Programming and learning C++, C#, Maya, Unity, and
-            Unreal Engine.<br /><br />
-            Join me on my journey as I learn and create! Let's make some video game magic! Crafting immersive worlds one game
-            at a time. Join me on my mission to create and save the world from the void with my open world RPG sandbox game!
-        </p>
-
         <h2>SKILLS</h2>
+    </div>
 
-        <p>C++, C#: I have used both of these languages to make small prototype games, ranging from a text-based adventure to a
-            3D grappling-based game.</p>
+    <!-- Main Content (Appears Below) -->
+    <div class="Main">
+        <img src="EvilGenie.png" alt="Image" class="logo">
+        <p>Ready for any challenge! With over Ten years of programming experience in C++, C#, Java, Python, HTML, CSS, and JavaScript.<br /><br />
+        With 10+ years of Unity experience and 1.5+ years of Unreal Engine experience. Let's code the future of Games together!<br /><br />
+        Dreamer by day, gamer by night. Creating video game as if by magic.<br /><br />
+        I'm currently attending Trios College for Video Game Design & Programming and learning C++, C#, Maya, Unity, and Unreal Engine.<br /><br />
+        Join me on my journey as I learn and create! Let's make some video game magic! Crafting immersive worlds one game at a time. Join me on my mission to create and save the world from the void with my open world RPG sandbox game!</p>
 
+        <p>C++, C#: I have used both of these languages to make small prototype games, ranging from a text-based adventure to a 3D grappling-based game.</p>
         <p>HTML, CSS: I have used these to create the website you're currently viewing.</p>
-
-        <p>Unreal Engine: I have used up to version 4.27 and have about a year and a half of experience working with its
-            built-in blueprints and using C++ to create my own scripts.</p>
-
-        <p>Unity: I have over ten years of experience in this game engine. I have created several small prototypes for
-            mechanics, such as a grappling hook swinging game where you try to move from point to point in a set time, a Call
-            of Duty zombie-styled survival game, and my favorite, a small survival game prototype that included a player
-            manager, inventory, stats, crafting, enemies, and object placement in the world.</p>
+        <p>Unreal Engine: I have used up to version 4.27 and have about a year and a half of experience working with its built-in blueprints and using C++ to create my own scripts.</p>
+        <p>Unity: I have over ten years of experience in this game engine. I have created several small prototypes for mechanics, such as a grappling hook swinging game where you try to move from point to point in a set time, a Call of Duty zombie-styled survival game, and my favorite, a small survival game prototype that included a player manager, inventory, stats, crafting, enemies, and object placement in the world.</p>
 
         <div class="BottomBar">
             <hr style="color:lime; width:100%" />
             <p>My Social Links</p>
             <hr style="color:lime; width:100%" />
-
             <div class="social-links">
                 <a href="https://github.com/JMichalikCoding" target="_blank" rel="noopener noreferrer">
                     <img src="GitHubLogo.png" alt="GitHub" class="social-logo"></a>
                 <a href="https://www.linkedin.com/in/joshua-michalik/" target="_blank" rel="noopener noreferrer">
                     <img src="LinkedInLogo.png" alt="LinkedIn" class="social-logo"></a>
-                <a href="https://www.youtube.com/channel/UC_Ra3H7Vs43f8Bb_EpOzEUg" target="_blank"
-                    rel="noopener noreferrer"><img src="YouTubeLogo.png" alt="YouTube" class="social-logo"></a>
+                <a href="https://www.youtube.com/channel/UC_Ra3H7Vs43f8Bb_EpOzEUg" target="_blank" rel="noopener noreferrer">
+                    <img src="YouTubeLogo.png" alt="YouTube" class="social-logo"></a>
             </div>
         </div>
     </div>
-
 </body>
-
 </html>
